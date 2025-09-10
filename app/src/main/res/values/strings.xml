@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App -->
+    <string name="app_name">CodePath</string>
+
+    <!-- Module Titles -->
+    <string name="title_variables">Variables</string>
+    <string name="title_data_types">Data Types</string>
+    <string name="title_control_flow">Control Flow</string>
+    <string name="title_functions">Functions</string>
+    <string name="title_debugging">Debugging</string>
+    <string name="title_algorithms">Algorithms</string>
+
+    <!-- Common UI -->
+    <string name="action_share">Share</string>
+
+    <!-- Algorithms Screen Headings -->
+    <string name="algorithms_heading_definition">Definition</string>
+    <string name="algorithms_heading_why">Why Algorithms Matter</string>
+    <string name="algorithms_heading_key_characteristics">Key Characteristics</string>
+    <string name="algorithms_heading_big_o">Time Complexity (Big-O)</string>
+    <string name="algorithms_heading_linear_search">Linear Search</string>
+    <string name="algorithms_heading_binary_search">Binary Search</string>
+    <string name="algorithms_heading_bubble">Simple Sorting (Bubble Sort)</string>
+    <string name="algorithms_heading_choosing">Choosing Algorithms</string>
+    <string name="algorithms_heading_common_mistakes">Common Mistakes</string>
+    <string name="algorithms_heading_practice">Practice Ideas</string>
+    <string name="algorithms_heading_tips">Tips</string>
+
+    <!-- Algorithms Body Text -->
+    <string name="algorithms_definition">
+        An algorithm is a finite, well-defined sequence of steps to solve a problem or perform a computation.
+    </string>
+
+    <string name="algorithms_why">
+        • Enable efficient solutions\n• Optimize time &amp; memory\n• Improve scalability\n• Reveal trade-offs\n• Form interview fundamentals
+    </string>
+
+    <string name="algorithms_key_characteristics">
+        • Correctness: Produces right output\n• Efficiency: Uses reasonable time &amp; space\n• Determinism: Same input → same output\n• Clarity: Easy to reason about
+    </string>
+
+    <!-- Escape < with &lt; OR use CDATA; here we escape because not code -->
+    <string name="algorithms_big_o">
+        O(1) &lt; O(log n) &lt; O(n) &lt; O(n log n) &lt; O(n²) &lt; O(2ⁿ)\nChoose the lowest reasonable complexity for growth.
+    </string>
+
+    <string name="algorithms_linear_search_desc">
+        Scan each element until the target is found or the list ends. Complexity: O(n).
+    </string>
+
+    <string name="algorithms_binary_search_desc">
+        Works on sorted arrays by halving the search space. Complexity: O(log n).
+    </string>
+
+    <string name="algorithms_bubble_desc">
+        Bubble sort repeatedly swaps adjacent out-of-order pairs. Complexity: O(n²); good for learning, not large data.
+    </string>
+
+    <string name="algorithms_choosing">
+        Prefer clarity first. Optimize only when needed. Use hashing for fast lookups, binary search for ordered data, and efficient sorts (like merge/quick sort) for large sets.
+    </string>
+
+    <string name="algorithms_common_mistakes">
+        • Over-optimizing too early\n• Ignoring edge cases (empty, null, duplicates)\n• Not analyzing complexity\n• Rewriting existing library solutions\n• Using recursion without base case clarity
+    </string>
+
+    <string name="algorithms_practice">
+        1. Implement linear vs binary search and compare steps.\n2. Write selection sort, then refactor to insertion sort.\n3. Count frequency of characters using a map.\n4. Reverse an array in-place.\n5. Compute Fibonacci iteratively &amp; recursively.
+    </string>
+
+    <string name="algorithms_tips">
+        • Start with brute force, then refine.\n• Diagram the process.\n• Test extremes (0, 1, large, duplicates).\n• Track time/space in comments.\n• Use library utilities when appropriate.
+    </string>
+
+    <!-- Algorithms Code Snippets (use CDATA so raw < is allowed) -->
+    <string name="algorithms_linear_search_code"><![CDATA[int linearSearch(int[] arr, int target) {
+    for (int i = 0; i < arr.length; i++) {
+        if (arr[i] == target) return i;
+    }
+    return -1;
+}]]></string>
+
+    <string name="algorithms_binary_search_code"><![CDATA[int binarySearch(int[] arr, int target) {
+    int left = 0, right = arr.length - 1;
+    while (left <= right) {
+        int mid = (left + right) / 2;
+        if (arr[mid] == target) return mid;
+        if (arr[mid] < target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}]]></string>
+
+    <string name="algorithms_bubble_code"><![CDATA[void bubble(int[] a) {
+    for (int i = 0; i < a.length - 1; i++) {
+        for (int j = 0; j < a.length - 1 - i; j++) {
+            if (a[j] > a[j+1]) {
+                int tmp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = tmp;
+            }
+        }
+    }
+}]]></string>
+
+    <!-- Debugging Screen (optional) -->
+    <string name="debugging_heading_definition">Definition</string>
+    <string name="debugging_definition">
+        Debugging is the systematic process of finding, understanding, and fixing defects so the program behaves as intended.
+    </string>
+    <string name="debugging_heading_why">Why Debugging Matters</string>
+    <string name="debugging_why">
+        • Ensures correctness\n• Builds code understanding\n• Improves reliability\n• Reduces maintenance cost\n• Teaches runtime behavior
+    </string>
+    <string name="debugging_common_bug_types_heading">Common Bug Types</string>
+    <string name="debugging_common_bug_types">
+        • Syntax: Won’t compile\n• Runtime: Crashes (null pointer, divide by zero)\n• Logic: Wrong result\n• Performance: Slow or memory-heavy\n• Resource: Leaks (files, cursors)
+    </string>
+    <string name="debugging_core_techniques_heading">Core Techniques</string>
+    <string name="debugging_core_techniques">
+        • Reproduce consistently\n• Read stack traces\n• Binary search code path with logs\n• Use breakpoints &amp; step\n• Inspect variables\n• Add tests for regressions
+    </string>
+    <string name="debugging_example_heading">Example: NullPointer Cause</string>
+    <string name="debugging_example_code"><![CDATA[// Crash Log:
+// java.lang.NullPointerException at UserManager.getDisplayName(UserManager.java:22)
+
+User user = repository.fetch();
+String name = user.getDisplayName().toUpperCase();
+
+// Fix:
+User user2 = repository.fetch();
+if (user2 != null && user2.getDisplayName() != null) {
+    String fixed = user2.getDisplayName().toUpperCase();
+}]]></string>
+    <string name="debugging_logging_heading">Effective Logging</string>
+    <string name="debugging_logging">
+        • Use consistent tags\n• Log boundary values\n• Remove noisy temp logs\n• Don’t log secrets\n• Keep messages concise
+    </string>
+    <string name="debugging_breakpoints_heading">Breakpoints &amp; Tools</string>
+    <string name="debugging_breakpoints">
+        Set breakpoints near suspects, step over/into, watch variables, evaluate expressions. Use profilers for memory/CPU issues.
+    </string>
+    <string name="debugging_common_mistakes_heading">Common Mistakes</string>
+    <string name="debugging_common_mistakes">
+        • Guessing\n• Fixing symptoms only\n• Ignoring warnings\n• Over-logging\n• Skipping post-fix tests
+    </string>
+    <string name="debugging_practice_heading">Practice Ideas</string>
+    <string name="debugging_practice">
+        1. Introduce a null intentionally.\n2. Isolate a logic bug with logs.\n3. Step through a loop.\n4. Measure performance before &amp; after.\n5. Write a failing test then fix.
+    </string>
+    <string name="debugging_tips_heading">Tips</string>
+    <string name="debugging_tips">
+        • Simplify failing case\n• Change one thing at a time\n• Keep hypotheses notes\n• Automate regression tests\n• Celebrate small wins
+    </string>
+
+
+    <string name="share_algorithms_message"><![CDATA[I’m learning Algorithms:
+• Linear vs Binary search
+• Sorting basics
+• Big-O thinking
+• Choosing efficient approaches
+
+Example:
+int idx = binarySearch(arr, target);]]></string>
+
+    <string name="share_debugging_message"><![CDATA[I’m learning Debugging:
+• Reproduce the bug
+• Read stack traces
+• Use breakpoints & logging
+• Fix root cause, not symptom
+
+Example:
+if (user != null) { /* ... */ }]]></string>
+
+</resources>

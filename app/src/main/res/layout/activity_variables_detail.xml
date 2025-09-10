@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_background"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp"
+        android:gravity="center_horizontal">
+
+        <!-- Header Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="10dp"
+            cardView:cardCornerRadius="22dp"
+            cardView:cardElevation="10dp"
+            cardView:cardBackgroundColor="@color/card_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/iconVariables"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_variables"
+                    android:padding="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/titleVariables"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Learn Variables"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="14dp"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Definition -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Definition"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#F57C00"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A variable is a named storage location in memory that holds a value your program can use or change later. It helps you label data so the code is readable and reusable."
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Why Variables Matter -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Why Variables Matter"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Let you store user input\n• Enable calculations and logic\n• Improve readability\n• Allow reuse instead of hardcoding values"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Declaration vs Initialization -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Declaration vs Initialization"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Declaration gives a variable a name and type. Initialization assigns its first value. You can also do both in a single line."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='// Declaration only:\nint age;\n\n// Initialization later:\nage = 18;\n\n// Combined:\nint count = 0;'
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"
+            android:textIsSelectable="true"/>
+
+        <!-- Naming Conventions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Naming Conventions"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use lowerCamelCase, descriptive names, and avoid meaningless letters."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='int u = 5;      // weak name\nint userScore = 5; // clearer\nint maxRetries = 3;'
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"
+            android:textIsSelectable="true"/>
+
+        <!-- Reassignment & Immutability -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reassignment &amp; Immutability"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Variables can often be reassigned. If a language supports constants (like final in Java), use them when the value should never change."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='int score = 10;\nscore = 12; // reassigned\n\nfinal int MAX = 100; // cannot change later'
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"
+            android:textIsSelectable="true"/>
+
+        <!-- Scope Basics -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scope Basics"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scope determines where a variable is accessible. Variables declared inside a block ( { } ) are not visible outside it."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='{\n    int temp = 5;\n}\n// temp not accessible here'
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"
+            android:textIsSelectable="true"/>
+
+        <!-- Common Mistakes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Common Mistakes"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Overly short or cryptic names\n• Using a bigger type than needed\n• Forgetting to initialize before use\n• Reusing the same name in nested scopes causing shadowing issues"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Practice Ideas -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Practice Ideas"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Declare and initialize variables for a simple shopping cart (price, quantity, total).\n2. Create a constant for tax rate and use it in a calculation.\n3. Practice converting between int, double, and String.\n4. Try declaring a variable in a loop and access it outside (see the error)."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="18dp"/>
+
+        <!-- Tips -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tips"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Initialize when it makes logical sense.\n• Keep scope as small as possible.\n• Use meaningful names (totalPrice, userAge).\n• Prefer constants for fixed values."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Share Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShareVariables"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Share"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+</ScrollView>

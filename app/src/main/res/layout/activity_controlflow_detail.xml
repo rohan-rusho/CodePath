@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_background"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp"
+        android:gravity="center_horizontal">
+
+        <!-- Header Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="10dp"
+            cardView:cardCornerRadius="22dp"
+            cardView:cardElevation="10dp"
+            cardView:cardBackgroundColor="@color/card_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/iconControlFlow"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_control_flow"
+                    android:padding="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/titleControlFlow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Learn Control Flow"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="14dp"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Definition -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Definition"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#F57C00"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Control flow is the order in which individual statements, instructions, or function calls are executed or evaluated. Structures like conditionals and loops let a program make decisions and repeat actions."
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Core Building Blocks -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Core Building Blocks"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Sequential execution (top to bottom)\n2. Decision making (if / else / switch)\n3. Looping (for / while / do-while)\n4. Branch alteration (break / continue / return)"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- If / Else -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="If / Else Statements"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use if / else to execute code only when a condition is true; else handles the fallback."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="int score = 87;\nchar grade;\n\nif (score >= 90) {\n    grade = 'A';\n} else if (score >= 80) {\n    grade = 'B';\n} else {\n    grade = 'C';\n}"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Switch -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Switch Statement"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Switch provides cleaner branching when comparing the same value against many discrete cases."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="int day = 3;\nString name;\n\nswitch (day) {\n    case 1: name = &quot;Monday&quot;; break;\n    case 2: name = &quot;Tuesday&quot;; break;\n    case 3: name = &quot;Wednesday&quot;; break;\n    default: name = &quot;Unknown&quot;;\n}"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- For Loop -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="For Loop"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A for loop is ideal when you know the iteration count ahead of time."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="for (int i = 0; i &lt; 5; i++) {\n    System.out.println(&quot;i = &quot; + i);\n}"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- While Loop -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="While Loop"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A while loop repeats while the condition stays true; condition is checked before each iteration."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="int n = 3;\nwhile (n > 0) {\n    System.out.println(n);\n    n--;\n}"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Do-While Loop -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Do-While Loop"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Executes the body at least once, then checks the condition at the end."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="int x = 0;\ndo {\n    System.out.println(&quot;Value: &quot; + x);\n    x++;\n} while (x &lt; 3);"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Break & Continue -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="break &amp; continue"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="break exits the loop entirely; continue skips to the next iteration."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="for (int i = 0; i &lt; 6; i++) {\n    if (i == 2) continue; // skip 2\n    if (i == 5) break;    // stop loop\n    System.out.println(i);\n}"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Common Mistakes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Common Mistakes"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Forgetting to update loop variables (infinite loops)\n• Using == for Strings in Java (should use equals)\n• Deeply nested if statements reducing readability\n• Off-by-one errors in loop bounds\n• Missing default case in switch when needed"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Practice Ideas -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Practice Ideas"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Print numbers 1–50 skipping multiples of 7.\n2. Count vowels in a String using a loop.\n3. Rewrite a while loop as a for loop.\n4. Build a simple menu using switch.\n5. Detect the first even number in an array then break."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="18dp"/>
+
+        <!-- Tips -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tips"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Keep conditions simple &amp; readable.\n• Prefer early breaks instead of deeply nested blocks.\n• Double-check loop boundaries to avoid off-by-one.\n• Refactor repeated condition logic into functions."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Share Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShareControlFlow"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Share"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+</ScrollView>

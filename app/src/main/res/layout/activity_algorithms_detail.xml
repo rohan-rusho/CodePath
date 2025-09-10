@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_background"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingBottom="32dp">
+
+        <!-- Header Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="18dp"
+            cardView:cardCornerRadius="22dp"
+            cardView:cardElevation="10dp"
+            cardView:cardBackgroundColor="@color/card_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/iconAlgorithms"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_algorithms"
+                    android:padding="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/titleAlgorithms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_algorithms"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="14dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Definition -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_heading_definition"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_definition"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Why -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_heading_why"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_why"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Key Characteristics -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_heading_key_characteristics"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_key_characteristics"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Big O -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_heading_big_o"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_big_o"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Linear Search -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_heading_linear_search"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="2dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_linear_search_desc"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_linear_search_code"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Binary Search -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_heading_binary_search"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="2dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_binary_search_desc"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_binary_search_code"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Bubble Sort -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_heading_bubble"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="2dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_bubble_desc"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_bubble_code"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Choosing -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_heading_choosing"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="2dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_choosing"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Common Mistakes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_heading_common_mistakes"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="2dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_common_mistakes"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Practice -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_heading_practice"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="2dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_practice"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="18dp"/>
+
+        <!-- Tips -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_heading_tips"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/algorithms_tips"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Share -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShareAlgorithms"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/action_share"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+</ScrollView>

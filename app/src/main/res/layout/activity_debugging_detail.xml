@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_background"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp"
+        android:gravity="center_horizontal">
+
+        <!-- Header Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="18dp"
+            cardView:cardCornerRadius="22dp"
+            cardView:cardElevation="10dp"
+            cardView:cardBackgroundColor="@color/card_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/iconDebugging"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_debugging"
+                    android:padding="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/titleDebugging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Learn Debugging"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="14dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Definition -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Definition"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Debugging is the systematic process of finding, understanding, and fixing defects (bugs) in code so the program behaves as intended."
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Why Debugging Matters -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Why Debugging Matters"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Ensures correctness\n• Builds code understanding\n• Improves reliability &amp; confidence\n• Reduces future maintenance cost\n• Teaches you how the runtime really works"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Types of Bugs -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Common Bug Types"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Syntax: Code won't compile\n• Runtime: Crashes (null pointer, divide by zero)\n• Logic: Wrong result, no crash\n• Performance: Slow or memory-heavy\n• Resource: Leaks, not closing files or cursors"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Core Techniques -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Core Techniques"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Reproduce consistently\n• Read stack traces carefully\n• Binary search the code path (add logs halfway)\n• Use breakpoints &amp; step execution\n• Inspect variable values and conditions\n• Write or enhance tests to lock behavior"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Example Debug Session -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Example: NullPointer Cause"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="// Crash Log:\n// java.lang.NullPointerException at UserManager.getDisplayName(UserManager.java:22)\n\nUser user = repository.fetch();\nString name = user.getDisplayName().toUpperCase();\n\n// Fix: null-check before usage\nUser user2 = repository.fetch();\nif (user2 != null &amp;&amp; user2.getDisplayName() != null) {\n    String fixed = user2.getDisplayName().toUpperCase();\n}"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Logging Tips -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Effective Logging"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Use consistent tags\n• Log inputs &amp; boundary values\n• Remove noisy temporary logs\n• Avoid logging secrets (tokens/passwords)\n• Prefer structured or concise messages"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Breakpoints / Tools -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Breakpoints &amp; Tools"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set breakpoints before suspected lines, step into/over calls, watch variables, evaluate expressions. Use profiler for memory/CPU issues."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Common Mistakes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Common Mistakes"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Guessing instead of reproducing\n• Fixing a symptom not the root cause\n• Ignoring warnings\n• Over-logging everything\n• Not writing a test after the fix"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Practice Ideas -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Practice Ideas"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Intentionally introduce a null and trace the crash.\n2. Add logs to isolate a logic bug.\n3. Use a debugger to step through a loop.\n4. Measure performance before &amp; after a change.\n5. Write a failing test, then fix the code."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="18dp"/>
+
+        <!-- Tips -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tips"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Simplify the failing case.\n• Change one thing at a time.\n• Keep a scratchpad of hypotheses.\n• Automate regression tests early.\n• Celebrate small debugging wins."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Share Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShareDebugging"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Share"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+</ScrollView>

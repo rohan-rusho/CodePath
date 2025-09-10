@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_background"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp"
+        android:gravity="center_horizontal">
+
+        <!-- Header Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="10dp"
+            cardView:cardCornerRadius="22dp"
+            cardView:cardElevation="10dp"
+            cardView:cardBackgroundColor="@color/card_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/iconFunctions"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_functions"
+                    android:padding="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/titleFunctions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Learn Functions"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="14dp"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Definition -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Definition"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#F57C00"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A function (or method) is a named block of code that performs a specific task. It can accept input values (parameters) and optionally return a result. Functions promote reuse, clarity, and modular design."
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Why Use Functions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Why Use Functions?"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Avoid repeating code\n• Group related logic\n• Improve readability\n• Enable testing and maintenance\n• Enable abstraction (hide details from callers)"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Parts of a Function -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parts of a Function"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Name: Identifies the function.\n2. Parameters: Optional inputs.\n3. Body: Code block executed.\n4. Return Type / Value: Optional output.\n5. Call Site: Where it's invoked."
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Parameters vs Arguments -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parameters vs Arguments"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parameters are placeholders in the function definition. Arguments are the actual values you pass when calling the function."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Basic Example -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Example (Java)"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="int add(int a, int b) {\n    return a + b;\n}\n\nint result = add(3, 5); // result = 8"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Return vs Void -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Return vs Void Functions"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A function with a return type sends back a value. A void function performs an action but does not return a value."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='// Void example:\nvoid greet(String name){\n    System.out.println("Hello " + name);\n}\n\n// Returns a value:\nboolean isEven(int n){\n    return n % 2 == 0;\n}'
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"
+            android:textIsSelectable="true"/>
+        <!-- Pure vs Impure -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pure vs Impure Functions"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pure: Output depends only on inputs, no side effects.\nImpure: Reads/writes external state, logs, modifies global variables, etc."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Common Mistakes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Common Mistakes"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Making functions do too many things\n• Using unclear names\n• Excessive parameters (more than 3–4)\n• Not reusing existing functions\n• Ignoring return values"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Practice Ideas -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Practice Ideas"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Write a function to find the max of two numbers.\n2. Make a function that prints a multiplication table for a number.\n3. Create a function that reverses a string.\n4. Make a function that counts vowels."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="18dp"/>
+
+        <!-- Tips -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tips"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Keep functions small and focused.\n• Use verbs for function names (calculateTotal, findUser).\n• Refactor duplicated logic into functions early.\n• Write tests for critical functions."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Share Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShareFunctions"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Share"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+</ScrollView>
